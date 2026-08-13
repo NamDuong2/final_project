@@ -664,17 +664,17 @@ def main():
     # ----- Collisions -----
     collisions = load_collisions()
     collisions_clean = clean_collisions(collisions)
-    #summarize_collisions(collisions, collisions_clean)
+    summarize_collisions(collisions, collisions_clean)
     if RUN_PLOTS:
         plot_collisions(collisions_clean)
 
     # ----- Air quality -----
     filtered_air = load_and_filter_air_quality()
-    #summarize_air_quality(filtered_air)
+    summarize_air_quality(filtered_air)
 
     # ----- Poverty -----
     poverty_df = load_poverty()
-    #summarize_poverty(poverty_df)
+    summarize_poverty(poverty_df)
 
     # ----- RQ3: collisions + air quality -----
     collisions_clean = prepare_collisions_for_join(collisions_clean)
